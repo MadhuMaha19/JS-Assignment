@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REWARD FOR SALES</title>
+</head>
+<body>
+    <script>
+        let n=prompt("Enter the sales amount for the year");
+        console.log(n);
+        let comm;
+        if(n>=0 && n<=5000)
+        {
+            comm=n*0.02;
+        }
+        else if(n>=50001 && n<=10000)
+        {
+            comm=n*0.05;
+        }
+        else if(n>=10001 && n<=20000)
+        {
+            comm=n*0.07;
+        }
+        else{
+            comm=n*0.10;
+        }
+        console.log(parseInt(n)+parseInt(comm));
+    </script>
+</body>
+</html>
