@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <style>
+        .col{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">We are Excited<br></h1>
+    
+    <h4 id="time"></h4>
+    <button id='dark' onclick="changecolor()">Dark theme</button>
+    
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum totam cumque saepe tenetur dolor, quod magni deserunt asperiores accusantium eius ab ratione omnis ducimus natus fugit tempora repudiandae unde temporibus sed veritatis officiis ad fugiat architecto obcaecati! Dicta labore, velit eius culpa, qui porro unde officia, doloremque iste adipisci modi.
+    </p>
+    
+    <script>
+        let name=prompt("Enter the user name","anonymous");
+        title.innerText +=`Welcome to this webpage ${name}`;
+       /* const mode=document.getElementById("dark");
+        mode.onclick=function changeColor(){
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'white';
+            document.body.style.fontFamily='Helvetica';
+        }*/
+       let theme=document.getElementById('dark');
+        function changecolor(){
+            if(theme.innerHTML=="Dark theme")
+            {
+                theme.innerHTML="Light theme";
+                document.body.classList.toggle("col");
+            }
+            else{
+                theme.innerHTML="Dark theme";
+                document.body.classList.toggle("col");
+            }
+        
+        }
+        const ctime=document.getElementById("time");
+        function clock(){
+            let date =new Date();
+            let time= date.toLocaleTimeString();
+            ctime.innerText=time;
+        }
+        setInterval(clock,1000);
+    </script>
+</body>
+</html>

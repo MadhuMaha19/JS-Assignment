@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing the background color after every 5 seconds</title>
+</head>
+<body onload="start()">
+    <h1>Welcome to the Colorful Environment</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, culpa.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem, perspiciatis culpa tenetur ipsum non alias omnis eum molestiae distinctio?</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <script>
+ 
+        let color=["blue","black","green","yellow"];
+        function changecolor(){
+            setTimeout(function change(){
+                document.bgColor=color.shift();
+                if(color.length){
+                    setTimeout(change,5000);
+                }
+            },5000);
+        }
+        function start()
+        {
+            setInterval(changecolor(),20000);
+        }
+        </script>
+</body>
+</html>
